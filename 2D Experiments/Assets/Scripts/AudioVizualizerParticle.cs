@@ -8,6 +8,7 @@ public class AudioVizualizerParticle : MonoBehaviour
 {
     public bool niose;
     public bool psSize = true;
+    public float minoise;
     ParticleSystem ps;
     public float force = 10.0f;
     void Start()
