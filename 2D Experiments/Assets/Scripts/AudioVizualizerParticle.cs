@@ -8,7 +8,9 @@ public class AudioVizualizerParticle : MonoBehaviour
 {
     public bool niose;
     public bool psSize = true;
+    public bool trlsize = false;
     public float minoise;
+    public float trailwidth;
     ParticleSystem ps;
     public float force = 10.0f;
     void Start()
@@ -39,12 +41,14 @@ public class AudioVizualizerParticle : MonoBehaviour
 
     private void Update()
     {
-        
+        var no = ps.noise;
+        var tl = ps.trails;
 
         currentUpdateTime += Time.deltaTime;
         if (currentUpdateTime >= updateStep)
         {
-
+            
+            
 
             currentUpdateTime = 0f;
             audioSource.clip.GetData(clipSampleData, audioSource.timeSamples);
@@ -68,18 +72,28 @@ public class AudioVizualizerParticle : MonoBehaviour
             }
             else
             {
-                ps.startSize = minSize;
+                ps.startSize = 0.01f;
+            }
+
+            //Particle trail size
+            if (trlsize == true)
+            {
+                tl.widthOverTrail = clipLoudness;
+            }
+            else
+            {
+                tl.widthOverTrail = trailwidth;
             }
 
             //Particle movementNoise
-            //if (niose == true)
-            //{
-            //    ps.noise = clipLoudness;
-            //}
-            //else
-            //{
-            //    ps.startSize = minSize;
-            //}
+            if (niose == true)
+            {
+                no.strengthMultiplier = clipLoudness;
+            }
+            else
+            {
+                no.strengthMultiplier = minoise;
+            }
         }
     }
 

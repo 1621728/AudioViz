@@ -4550,7 +4550,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0, g: 1, b: 0.9218221, a: 0.050980393}
+      maxColor: {r: 1, g: 0.019995881, b: 0, a: 0.050980393}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -5202,14 +5202,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   niose: 0
-  psSize: 0
+  psSize: 1
+  trlsize: 1
+  minoise: 10
+  trailwidth: 1
   force: 10
   audioSource: {fileID: 1182817834}
   updateStep: 0.001
   sampleDataLength: 1024
   clipLoudness: 0
   gO: {fileID: 1753120402}
-  sizeFactor: 5
+  sizeFactor: 1
   minSize: 0.01
   maxSize: 500
 --- !u!114 &825169684
@@ -5336,7 +5339,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9a9795c2ae01b97418c9f80b621fd281, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 565694f0fe2ba9d49be314ca31be35ef, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -10910,6 +10913,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   niose: 0
   psSize: 1
+  trlsize: 0
+  minoise: 0
+  trailwidth: 0
   force: 10
   audioSource: {fileID: 1182817834}
   updateStep: 0.001
