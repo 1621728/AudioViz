@@ -4550,7 +4550,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 0.050980393}
+      maxColor: {r: 0, g: 1, b: 0.9218221, a: 0.050980393}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -5201,6 +5201,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3f096866434f884eabb47f8f5ad00a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  niose: 0
+  psSize: 0
   force: 10
   audioSource: {fileID: 1182817834}
   updateStep: 0.001
@@ -5208,7 +5210,7 @@ MonoBehaviour:
   clipLoudness: 0
   gO: {fileID: 1753120402}
   sizeFactor: 5
-  minSize: 0
+  minSize: 0.01
   maxSize: 500
 --- !u!114 &825169684
 MonoBehaviour:
@@ -5334,7 +5336,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 399956bf9bf03c84dae91032e8de5ff1, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 9a9795c2ae01b97418c9f80b621fd281, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -6157,7 +6159,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2130718056
 Transform:
   m_ObjectHideFlags: 0
@@ -10906,6 +10908,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3f096866434f884eabb47f8f5ad00a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  niose: 0
+  psSize: 1
   force: 10
   audioSource: {fileID: 1182817834}
   updateStep: 0.001

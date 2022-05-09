@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.ParticleSystemJobs;
 using UnityEngine;
 
 
 public class AudioVizualizerParticle : MonoBehaviour
 {
+    public bool niose;
+    public bool psSize = true;
     ParticleSystem ps;
     public float force = 10.0f;
     void Start()
@@ -56,7 +59,26 @@ public class AudioVizualizerParticle : MonoBehaviour
             
             //To do : Change the return value into a variable.
             //ps.startLifetime = clipLoudness;
-            ps.startSize = clipLoudness;
+
+            //ParticleSize
+            if (psSize == true)
+            {
+                ps.startSize = clipLoudness;
+            }
+            else
+            {
+                ps.startSize = minSize;
+            }
+
+            //Particle movementNoise
+            //if (niose == true)
+            //{
+            //    ps.noise = clipLoudness;
+            //}
+            //else
+            //{
+            //    ps.startSize = minSize;
+            //}
         }
     }
 
